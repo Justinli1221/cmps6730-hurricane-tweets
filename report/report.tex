@@ -1,0 +1,102 @@
+%
+% CMPS 4730/6730 project milestone report, based on the ACL 2020 template
+% provided in tulane-cmps6730/sample-project.
+%
+\documentclass[11pt,a4paper]{article}
+\usepackage[hyperref]{acl2020}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{times}
+\IfFileExists{pcrr7t.tfm}{}{\renewcommand{\ttdefault}{cmtt}} % fall back if Courier metrics are not installed
+\usepackage{latexsym}
+\renewcommand{\UrlFont}{\ttfamily\small}
+
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+
+\aclfinalcopy
+
+\title{Will It Work on the Next Storm? Classifying Hurricane Tweets\\by Humanitarian Need Across Events}
+
+\author{Justin Li \\
+  Tulane University / New Orleans, LA}
+
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+During hurricanes, responders must find actionable posts, such as rescue requests and damage reports, among a flood of news and sympathy messages. We classify tweets from six hurricanes in HumAID into humanitarian categories and ask whether a model works on a hurricane it has never seen. With TF-IDF + logistic regression, leaving the test hurricane out of training lowers macro-F1 from 0.699 to 0.671 on average, with the largest drops for ``not humanitarian'' and ``requests or urgent needs''. Masking storm names and places recovers about half of the gap, though single-run results are sensitive to hyperparameter tuning.
+\end{abstract}
+
+\section{Problem Overview}
+
+When a hurricane makes landfall, people post thousands of messages per hour. Some carry actionable information (a family trapped on a roof, a collapsed bridge), but they are mixed with news, jokes and support messages. Sorting tweets into humanitarian categories can help responders surface urgent information faster \citep{imran2015survey}.
+
+We frame the task as multi-class classification: given a tweet posted during a hurricane, predict one of nine humanitarian categories (Table~\ref{tab:per_class}). Our central question is \emph{generalization to an unseen event}. A deployed system is applied to a storm it was not trained on, and each storm has its own vocabulary of names, places and organizations; a model may learn that ``Houston'' signals a rescue request during Harvey, a shortcut that will not transfer. We compare \emph{in-event} evaluation, where the test hurricane also appears in training, with \emph{leave-one-hurricane-out} (LOHO) evaluation, where it does not, plus a variant that masks storm names and places. LOHO is not chronological (when testing on Matthew, 2016, the training storms are later ones), so it measures generalization to an unseen event rather than prediction from past storms only.
+
+\section{Data}
+
+We use HumAID \citep{alam2021humaid}, about 77K human-labeled tweets from 19 disasters (2016--2019), via the authors' official Hugging Face release (\texttt{QCRI/HumAID-events}), which includes tweet text and fixed train/dev/test splits per event. This avoids re-collecting tweets through the X API, which is no longer free. We keep the six Atlantic hurricanes, Matthew (2016), Harvey, Irma, Maria (2017), Florence (2018) and Dorian (2019): 41,320 tweets (28,921 train / 4,212 dev / 8,187 test) in nine categories.
+
+Two properties shape our experiments. Classes are imbalanced: ``rescue, volunteering or donation effort'' has 9,181 tweets, ``requests or urgent needs'' only 1,456. And the label distribution shifts between storms: ``injured or dead people'' is 13.5\% of Matthew tweets but 0.8\% of Dorian tweets. Matthew is also small (1,654 tweets vs.\ 6--9K for the others).
+
+\section{Method}
+
+\paragraph{Model.} We lowercase text, replace URLs and user mentions with placeholder tokens, and combine word (1--2 gram) and character (2--5 gram) TF-IDF features with logistic regression in scikit-learn \citep{pedregosa2011sklearn}. Character n-grams help with misspellings and hashtags (e.g., \texttt{\#harveyrelief}). We use balanced class weights and choose the regularization strength $C \in \{0.5, 1, 2, 4\}$ separately for every setting and fold on a dev set; in LOHO, this dev set contains only the other five hurricanes. Next we will add averaged word embeddings (general Twitter GloVe vs.\ the crisis word2vec of \citealp{imran2016lifeline}) and fine-tuned BERT \citep{devlin2019bert} and BERTweet \citep{nguyen2020bertweet} via Hugging Face Transformers.
+
+\paragraph{Masking (our variation).} To test reliance on event-specific words, we replace storm names (also inside hashtags) with \texttt{stormname} and 43 place names and abbreviations from the affected regions (e.g., Houston, Puerto Rico, Bahamas, NC) with \texttt{placename}. We plan to replace this preliminary list with a named-entity tagger.
+
+\paragraph{Evaluation.} Our main metric is macro-F1, which weights all classes equally, so rare but important classes such as ``requests or urgent needs'' count as much as frequent ones. Baselines are the majority class and the TF-IDF model. For each hurricane $h$ we test on its official test split under three settings. \textbf{In-event}: train on a random sample from all six training splits, including $h$, of the same size as the LOHO training set, so the two settings differ only in whether $h$ is seen. \textbf{LOHO}: train on the other five hurricanes. \textbf{LOHO+mask}: LOHO with masking.
+
+\section{Preliminary Results}
+
+Trained on all six hurricanes, the model reaches 0.730 macro-F1 on the pooled test set (majority class: 0.04). Table~\ref{tab:main} shows results per test hurricane.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\input{../results/table_main.tex}
+\caption{\label{tab:main} Macro-F1 on each hurricane's test split. In-event and LOHO train on the same number of tweets; only LOHO excludes the test hurricane.}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\input{../results/table_per_class.tex}
+\caption{\label{tab:per_class} Per-class F1 of the paired in-event and LOHO models of Table~\ref{tab:main}, averaged over test hurricanes (skipping hurricanes whose test split lacks the class).}
+\end{table}
+
+\paragraph{Unseen-event drop.} LOHO is below in-event on all six hurricanes, by 2.8 points on average (0.699 to 0.671), ranging from under 1 point (Matthew) to 7.1 points (Florence). Part of the Florence gap is a tuning effect: its LOHO dev set selected $C=4$, while with $C=0.5$ LOHO reaches 0.673. Dorian is the hardest event even in-event, likely because of the label shift above (very few ``injured or dead'' tweets make that class's F1 unstable). Matthew's test split has only 329 tweets, so its scores are noisy.
+
+\paragraph{Masking.} Masking recovers about half of the average LOHO drop (0.671 to 0.685) while costing little in-event (0.699 to 0.697). The gain comes mainly from Maria (+3.0 points) and Florence (+5.4, but only +1.3 against LOHO with $C=0.5$); on the other four storms the change is under 0.5 points. This suggests that some errors come from event-specific words, but repeated runs are needed to confirm it.
+
+\paragraph{Which classes fail to transfer?} Classes with distinctive vocabulary (``displaced people'', ``injured or dead'') transfer almost perfectly (Table~\ref{tab:per_class}). The largest drops are for ``not humanitarian'' (0.48 to 0.36), a broad class whose content varies by storm, and ``requests or urgent needs'' (0.49 to 0.44). The latter is also among the hardest classes in-event, which matters because urgent requests are what responders most need to find.
+
+\paragraph{Training size.} On the pooled data, macro-F1 rises from 0.37 with 100 training tweets to 0.66 with 1,000 and 0.73 with all 28.9K. Because these samples mix all six storms, this does not show that a few hundred labeled tweets from a new storm would help; we will test that hypothesis by adding target-event tweets to LOHO training.
+
+\section{Related Work}
+
+\citet{imran2015survey} survey methods for processing social media in emergencies, from event detection to classification and summarization; our project addresses one step of this pipeline.
+\citet{imran2016lifeline} release annotated tweets from 19 earlier crises (2013--2015) and word2vec embeddings trained on 52M crisis tweets, which we will use as one of our representations.
+\citet{nguyen2016rapid} show that CNNs outperform feature-engineered models and study the early hours of a disaster, when models must rely on data from other events. This is closest to our LOHO setting, but without pretrained transformers or masking.
+\citet{alam2021crisisbench} merge eight crisis datasets into one benchmark with consistent labels and report CNN, fastText and transformer results; they focus on unifying datasets, we focus on transfer between individual hurricanes.
+\citet{alam2021humaid} introduce HumAID, our dataset, and report in-event benchmarks; we add unseen-event evaluation.
+\citet{nguyen2020bertweet} pretrain BERTweet on English tweets, outperforming RoBERTa-base and XLM-R-base on tweet tasks. It is a general tweet model, and we will test whether tweet pretraining helps on crisis data compared with BERT.
+
+\section{Division of Labor}
+
+This is an individual project: Justin Li is responsible for data preparation, all models and experiments, analysis, the demo, the report and the presentation.
+
+\section{Timeline}
+
+\textbf{Nov 17}: word-embedding models in all settings. \textbf{Nov 22}: BERT and BERTweet on Google Colab (GPU). \textbf{Nov 26}: repeated runs, adding a few hundred target-event tweets to LOHO training, a chronological split (train on 2016--2018, test on Dorian 2019), entity-based masking and error analysis. \textbf{Nov 30}: slides and a Flask demo. \textbf{Dec 7}: final report.
+
+\section*{AI Usage Log}
+Tool: Claude. Purpose: help structuring the report, finding related work, and writing the preliminary experiment code. Verification: I checked each cited paper against its arXiv abstract, re-ran the experiment script, and edited the text.
+
+\bibliography{references}
+\bibliographystyle{acl_natbib}
+
+\end{document}

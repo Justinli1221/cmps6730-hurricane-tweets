@@ -1,0 +1,1012 @@
+{
+ "pooled_macro_f1": 0.7297818923871742,
+ "pooled_report": {
+  "caution_and_advice": {
+   "precision": 0.6512935883014623,
+   "recall": 0.7148148148148148,
+   "f1-score": 0.681577398469688,
+   "support": 810.0
+  },
+  "displaced_people_and_evacuations": {
+   "precision": 0.8680124223602484,
+   "recall": 0.9254966887417219,
+   "f1-score": 0.8958333333333334,
+   "support": 604.0
+  },
+  "infrastructure_and_utility_damage": {
+   "precision": 0.8217905405405406,
+   "recall": 0.8424242424242424,
+   "f1-score": 0.8319794784095768,
+   "support": 1155.0
+  },
+  "injured_or_dead_people": {
+   "precision": 0.884765625,
+   "recall": 0.9226069246435845,
+   "f1-score": 0.9032901296111665,
+   "support": 491.0
+  },
+  "not_humanitarian": {
+   "precision": 0.5090252707581228,
+   "recall": 0.6467889908256881,
+   "f1-score": 0.5696969696969697,
+   "support": 654.0
+  },
+  "other_relevant_information": {
+   "precision": 0.614760147601476,
+   "recall": 0.5186799501867995,
+   "f1-score": 0.5626477541371159,
+   "support": 1606.0
+  },
+  "requests_or_urgent_needs": {
+   "precision": 0.4583333333333333,
+   "recall": 0.6827586206896552,
+   "f1-score": 0.5484764542936288,
+   "support": 290.0
+  },
+  "rescue_volunteering_or_donation_effort": {
+   "precision": 0.844019728729963,
+   "recall": 0.753025302530253,
+   "f1-score": 0.7959302325581395,
+   "support": 1818.0
+  },
+  "sympathy_and_support": {
+   "precision": 0.8008356545961003,
+   "recall": 0.7575757575757576,
+   "f1-score": 0.7786052809749492,
+   "support": 759.0
+  },
+  "accuracy": 0.728227678026139,
+  "macro avg": {
+   "precision": 0.7169818123579162,
+   "recall": 0.7515745880480574,
+   "f1-score": 0.7297818923871742,
+   "support": 8187.0
+  },
+  "weighted avg": {
+   "precision": 0.7366314187479005,
+   "recall": 0.728227678026139,
+   "f1-score": 0.7293059278634161,
+   "support": 8187.0
+  }
+ },
+ "C": 0.5,
+ "per_event": {
+  "hurricane_matthew_2016": {
+   "in_event": 0.7607512275575359,
+   "in_event_C": 2,
+   "in_event_report": {
+    "caution_and_advice": {
+     "precision": 1.0,
+     "recall": 0.7142857142857143,
+     "f1-score": 0.8333333333333334,
+     "support": 7.0
+    },
+    "displaced_people_and_evacuations": {
+     "precision": 0.875,
+     "recall": 1.0,
+     "f1-score": 0.9333333333333333,
+     "support": 7.0
+    },
+    "infrastructure_and_utility_damage": {
+     "precision": 0.7575757575757576,
+     "recall": 0.7142857142857143,
+     "f1-score": 0.7352941176470589,
+     "support": 35.0
+    },
+    "injured_or_dead_people": {
+     "precision": 0.9347826086956522,
+     "recall": 0.9772727272727273,
+     "f1-score": 0.9555555555555556,
+     "support": 44.0
+    },
+    "not_humanitarian": {
+     "precision": 0.34782608695652173,
+     "recall": 0.5333333333333333,
+     "f1-score": 0.42105263157894735,
+     "support": 15.0
+    },
+    "other_relevant_information": {
+     "precision": 0.6875,
+     "recall": 0.6666666666666666,
+     "f1-score": 0.676923076923077,
+     "support": 66.0
+    },
+    "requests_or_urgent_needs": {
+     "precision": 0.6,
+     "recall": 0.5454545454545454,
+     "f1-score": 0.5714285714285714,
+     "support": 11.0
+    },
+    "rescue_volunteering_or_donation_effort": {
+     "precision": 0.8620689655172413,
+     "recall": 0.7692307692307693,
+     "f1-score": 0.8130081300813008,
+     "support": 65.0
+    },
+    "sympathy_and_support": {
+     "precision": 0.8902439024390244,
+     "recall": 0.9240506329113924,
+     "f1-score": 0.906832298136646,
+     "support": 79.0
+    },
+    "accuracy": 0.7933130699088146,
+    "macro avg": {
+     "precision": 0.7727774801315775,
+     "recall": 0.760508900382318,
+     "f1-score": 0.7607512275575359,
+     "support": 329.0
+    },
+    "weighted avg": {
+     "precision": 0.8034247071532269,
+     "recall": 0.7933130699088146,
+     "f1-score": 0.7960793680035237,
+     "support": 329.0
+    }
+   },
+   "in_event_mask": 0.7536902415817468,
+   "in_event_mask_C": 2,
+   "loho": 0.7544665942330074,
+   "loho_C": 1,
+   "loho_report": {
+    "caution_and_advice": {
+     "precision": 0.8571428571428571,
+     "recall": 0.8571428571428571,
+     "f1-score": 0.8571428571428571,
+     "support": 7.0
+    },
+    "displaced_people_and_evacuations": {
+     "precision": 0.875,
+     "recall": 1.0,
+     "f1-score": 0.9333333333333333,
+     "support": 7.0
+    },
+    "infrastructure_and_utility_damage": {
+     "precision": 0.7575757575757576,
+     "recall": 0.7142857142857143,
+     "f1-score": 0.7352941176470589,
+     "support": 35.0
+    },
+    "injured_or_dead_people": {
+     "precision": 0.9767441860465116,
+     "recall": 0.9545454545454546,
+     "f1-score": 0.9655172413793104,
+     "support": 44.0
+    },
+    "not_humanitarian": {
+     "precision": 0.3076923076923077,
+     "recall": 0.5333333333333333,
+     "f1-score": 0.3902439024390244,
+     "support": 15.0
+    },
+    "other_relevant_information": {
+     "precision": 0.6268656716417911,
+     "recall": 0.6363636363636364,
+     "f1-score": 0.631578947368421,
+     "support": 66.0
+    },
+    "requests_or_urgent_needs": {
+     "precision": 0.6,
+     "recall": 0.5454545454545454,
+     "f1-score": 0.5714285714285714,
+     "support": 11.0
+    },
+    "rescue_volunteering_or_donation_effort": {
+     "precision": 0.8727272727272727,
+     "recall": 0.7384615384615385,
+     "f1-score": 0.8,
+     "support": 65.0
+    },
+    "sympathy_and_support": {
+     "precision": 0.9,
+     "recall": 0.9113924050632911,
+     "f1-score": 0.9056603773584906,
+     "support": 79.0
+    },
+    "accuracy": 0.7781155015197568,
+    "macro avg": {
+     "precision": 0.7526386725362776,
+     "recall": 0.7656643871833746,
+     "f1-score": 0.7544665942330074,
+     "support": 329.0
+    },
+    "weighted avg": {
+     "precision": 0.7964519373015609,
+     "recall": 0.7781155015197568,
+     "f1-score": 0.7845657727404445,
+     "support": 329.0
+    }
+   },
+   "loho_mask": 0.7516381257282737,
+   "loho_mask_C": 2,
+   "majority": 0.03666102650874224
+  },
+  "hurricane_harvey_2017": {
+   "in_event": 0.7034779855217176,
+   "in_event_C": 1,
+   "in_event_report": {
+    "caution_and_advice": {
+     "precision": 0.6666666666666666,
+     "recall": 0.5981308411214953,
+     "f1-score": 0.6305418719211823,
+     "support": 107.0
+    },
+    "displaced_people_and_evacuations": {
+     "precision": 0.8958333333333334,
+     "recall": 0.9485294117647058,
+     "f1-score": 0.9214285714285714,
+     "support": 136.0
+    },
+    "infrastructure_and_utility_damage": {
+     "precision": 0.8836206896551724,
+     "recall": 0.8506224066390041,
+     "f1-score": 0.8668076109936576,
+     "support": 241.0
+    },
+    "injured_or_dead_people": {
+     "precision": 0.8811188811188811,
+     "recall": 0.9064748201438849,
+     "f1-score": 0.8936170212765957,
+     "support": 139.0
+    },
+    "not_humanitarian": {
+     "precision": 0.25510204081632654,
+     "recall": 0.30864197530864196,
+     "f1-score": 0.27932960893854747,
+     "support": 81.0
+    },
+    "other_relevant_information": {
+     "precision": 0.5967741935483871,
+     "recall": 0.6342857142857142,
+     "f1-score": 0.6149584487534626,
+     "support": 350.0
+    },
+    "requests_or_urgent_needs": {
+     "precision": 0.45977011494252873,
+     "recall": 0.6060606060606061,
+     "f1-score": 0.5228758169934641,
+     "support": 66.0
+    },
+    "rescue_volunteering_or_donation_effort": {
+     "precision": 0.8675623800383877,
+     "recall": 0.8085867620751341,
+     "f1-score": 0.837037037037037,
+     "support": 559.0
+    },
+    "sympathy_and_support": {
+     "precision": 0.8125,
+     "recall": 0.7222222222222222,
+     "f1-score": 0.7647058823529411,
+     "support": 126.0
+    },
+    "accuracy": 0.7501385041551246,
+    "macro avg": {
+     "precision": 0.7021053666799648,
+     "recall": 0.7092838621801565,
+     "f1-score": 0.7034779855217176,
+     "support": 1805.0
+    },
+    "weighted avg": {
+     "precision": 0.762225046218732,
+     "recall": 0.7501385041551246,
+     "f1-score": 0.7548605376211898,
+     "support": 1805.0
+    }
+   },
+   "in_event_mask": 0.6902761995653763,
+   "in_event_mask_C": 1,
+   "loho": 0.6763726182808922,
+   "loho_C": 1,
+   "loho_report": {
+    "caution_and_advice": {
+     "precision": 0.6847826086956522,
+     "recall": 0.5887850467289719,
+     "f1-score": 0.6331658291457286,
+     "support": 107.0
+    },
+    "displaced_people_and_evacuations": {
+     "precision": 0.9191176470588235,
+     "recall": 0.9191176470588235,
+     "f1-score": 0.9191176470588235,
+     "support": 136.0
+    },
+    "infrastructure_and_utility_damage": {
+     "precision": 0.9227053140096618,
+     "recall": 0.7925311203319502,
+     "f1-score": 0.8526785714285714,
+     "support": 241.0
+    },
+    "injured_or_dead_people": {
+     "precision": 0.8805970149253731,
+     "recall": 0.8489208633093526,
+     "f1-score": 0.8644688644688645,
+     "support": 139.0
+    },
+    "not_humanitarian": {
+     "precision": 0.20588235294117646,
+     "recall": 0.43209876543209874,
+     "f1-score": 0.2788844621513944,
+     "support": 81.0
+    },
+    "other_relevant_information": {
+     "precision": 0.5263157894736842,
+     "recall": 0.6571428571428571,
+     "f1-score": 0.5844980940279543,
+     "support": 350.0
+    },
+    "requests_or_urgent_needs": {
+     "precision": 0.45901639344262296,
+     "recall": 0.42424242424242425,
+     "f1-score": 0.4409448818897638,
+     "support": 66.0
+    },
+    "rescue_volunteering_or_donation_effort": {
+     "precision": 0.9054054054054054,
+     "recall": 0.7191413237924866,
+     "f1-score": 0.8015952143569293,
+     "support": 559.0
+    },
+    "sympathy_and_support": {
+     "precision": 0.717741935483871,
+     "recall": 0.7063492063492064,
+     "f1-score": 0.712,
+     "support": 126.0
+    },
+    "accuracy": 0.7096952908587257,
+    "macro avg": {
+     "precision": 0.6912849401595856,
+     "recall": 0.6764810282653524,
+     "f1-score": 0.6763726182808922,
+     "support": 1805.0
+    },
+    "weighted avg": {
+     "precision": 0.759438165786824,
+     "recall": 0.7096952908587257,
+     "f1-score": 0.7271332481819089,
+     "support": 1805.0
+    }
+   },
+   "loho_mask": 0.6781333711803502,
+   "loho_mask_C": 2,
+   "majority": 0.052547471329197216
+  },
+  "hurricane_irma_2017": {
+   "in_event": 0.6856932103057782,
+   "in_event_C": 1,
+   "in_event_report": {
+    "caution_and_advice": {
+     "precision": 0.711340206185567,
+     "recall": 0.5655737704918032,
+     "f1-score": 0.6301369863013698,
+     "support": 122.0
+    },
+    "displaced_people_and_evacuations": {
+     "precision": 0.9066666666666666,
+     "recall": 0.9066666666666666,
+     "f1-score": 0.9066666666666666,
+     "support": 150.0
+    },
+    "infrastructure_and_utility_damage": {
+     "precision": 0.8430379746835444,
+     "recall": 0.8951612903225806,
+     "f1-score": 0.8683181225554107,
+     "support": 372.0
+    },
+    "injured_or_dead_people": {
+     "precision": 0.9037433155080213,
+     "recall": 0.9548022598870056,
+     "f1-score": 0.9285714285714286,
+     "support": 177.0
+    },
+    "not_humanitarian": {
+     "precision": 0.40425531914893614,
+     "recall": 0.4672131147540984,
+     "f1-score": 0.43346007604562736,
+     "support": 122.0
+    },
+    "other_relevant_information": {
+     "precision": 0.6087912087912087,
+     "recall": 0.5931477516059958,
+     "f1-score": 0.6008676789587852,
+     "support": 467.0
+    },
+    "requests_or_urgent_needs": {
+     "precision": 0.29545454545454547,
+     "recall": 0.52,
+     "f1-score": 0.37681159420289856,
+     "support": 25.0
+    },
+    "rescue_volunteering_or_donation_effort": {
+     "precision": 0.7455830388692579,
+     "recall": 0.6698412698412698,
+     "f1-score": 0.705685618729097,
+     "support": 315.0
+    },
+    "sympathy_and_support": {
+     "precision": 0.7272727272727273,
+     "recall": 0.7142857142857143,
+     "f1-score": 0.7207207207207207,
+     "support": 112.0
+    },
+    "accuracy": 0.7223415682062299,
+    "macro avg": {
+     "precision": 0.6829050002867194,
+     "recall": 0.6985213153172372,
+     "f1-score": 0.6856932103057782,
+     "support": 1862.0
+    },
+    "weighted avg": {
+     "precision": 0.7270034416531833,
+     "recall": 0.7223415682062299,
+     "f1-score": 0.7229685889383999,
+     "support": 1862.0
+    }
+   },
+   "in_event_mask": 0.6767881783461475,
+   "in_event_mask_C": 2,
+   "loho": 0.6690574151152264,
+   "loho_C": 2,
+   "loho_report": {
+    "caution_and_advice": {
+     "precision": 0.696969696969697,
+     "recall": 0.5655737704918032,
+     "f1-score": 0.6244343891402715,
+     "support": 122.0
+    },
+    "displaced_people_and_evacuations": {
+     "precision": 0.9280575539568345,
+     "recall": 0.86,
+     "f1-score": 0.8927335640138409,
+     "support": 150.0
+    },
+    "infrastructure_and_utility_damage": {
+     "precision": 0.8567639257294429,
+     "recall": 0.8682795698924731,
+     "f1-score": 0.8624833110814419,
+     "support": 372.0
+    },
+    "injured_or_dead_people": {
+     "precision": 0.9285714285714286,
+     "recall": 0.9548022598870056,
+     "f1-score": 0.9415041782729805,
+     "support": 177.0
+    },
+    "not_humanitarian": {
+     "precision": 0.3202247191011236,
+     "recall": 0.4672131147540984,
+     "f1-score": 0.38,
+     "support": 122.0
+    },
+    "other_relevant_information": {
+     "precision": 0.5904522613065326,
+     "recall": 0.5032119914346895,
+     "f1-score": 0.5433526011560693,
+     "support": 467.0
+    },
+    "requests_or_urgent_needs": {
+     "precision": 0.2857142857142857,
+     "recall": 0.56,
+     "f1-score": 0.3783783783783784,
+     "support": 25.0
+    },
+    "rescue_volunteering_or_donation_effort": {
+     "precision": 0.6607669616519174,
+     "recall": 0.7111111111111111,
+     "f1-score": 0.6850152905198776,
+     "support": 315.0
+    },
+    "sympathy_and_support": {
+     "precision": 0.7524752475247525,
+     "recall": 0.6785714285714286,
+     "f1-score": 0.7136150234741784,
+     "support": 112.0
+    },
+    "accuracy": 0.6960257787325457,
+    "macro avg": {
+     "precision": 0.6688884533917795,
+     "recall": 0.68541813846029,
+     "f1-score": 0.6690574151152264,
+     "support": 1862.0
+    },
+    "weighted avg": {
+     "precision": 0.7098187749187943,
+     "recall": 0.6960257787325457,
+     "f1-score": 0.699705093821706,
+     "support": 1862.0
+    }
+   },
+   "loho_mask": 0.6733157263972008,
+   "loho_mask_C": 4,
+   "majority": 0.03215434083601286
+  },
+  "hurricane_maria_2017": {
+   "in_event": 0.6931536598953757,
+   "in_event_C": 1,
+   "in_event_report": {
+    "caution_and_advice": {
+     "precision": 0.631578947368421,
+     "recall": 0.5454545454545454,
+     "f1-score": 0.5853658536585366,
+     "support": 44.0
+    },
+    "displaced_people_and_evacuations": {
+     "precision": 0.9583333333333334,
+     "recall": 0.8846153846153846,
+     "f1-score": 0.92,
+     "support": 26.0
+    },
+    "infrastructure_and_utility_damage": {
+     "precision": 0.8433333333333334,
+     "recall": 0.8939929328621908,
+     "f1-score": 0.8679245283018868,
+     "support": 283.0
+    },
+    "injured_or_dead_people": {
+     "precision": 0.9137931034482759,
+     "recall": 0.8833333333333333,
+     "f1-score": 0.8983050847457628,
+     "support": 60.0
+    },
+    "not_humanitarian": {
+     "precision": 0.2535211267605634,
+     "recall": 0.33962264150943394,
+     "f1-score": 0.2903225806451613,
+     "support": 53.0
+    },
+    "other_relevant_information": {
+     "precision": 0.6055363321799307,
+     "recall": 0.5627009646302251,
+     "f1-score": 0.5833333333333334,
+     "support": 311.0
+    },
+    "requests_or_urgent_needs": {
+     "precision": 0.553921568627451,
+     "recall": 0.8014184397163121,
+     "f1-score": 0.6550724637681159,
+     "support": 141.0
+    },
+    "rescue_volunteering_or_donation_effort": {
+     "precision": 0.8158640226628895,
+     "recall": 0.7365728900255755,
+     "f1-score": 0.7741935483870968,
+     "support": 391.0
+    },
+    "sympathy_and_support": {
+     "precision": 0.7523809523809524,
+     "recall": 0.5939849624060151,
+     "f1-score": 0.6638655462184874,
+     "support": 133.0
+    },
+    "accuracy": 0.7115117891816921,
+    "macro avg": {
+     "precision": 0.7031403022327946,
+     "recall": 0.6935217882836684,
+     "f1-score": 0.6931536598953757,
+     "support": 1442.0
+    },
+    "weighted avg": {
+     "precision": 0.7247766432882818,
+     "recall": 0.7115117891816921,
+     "f1-score": 0.7138486962924643,
+     "support": 1442.0
+    }
+   },
+   "in_event_mask": 0.7012263584820837,
+   "in_event_mask_C": 2,
+   "loho": 0.6625197721764837,
+   "loho_C": 1,
+   "loho_report": {
+    "caution_and_advice": {
+     "precision": 0.5686274509803921,
+     "recall": 0.6590909090909091,
+     "f1-score": 0.6105263157894737,
+     "support": 44.0
+    },
+    "displaced_people_and_evacuations": {
+     "precision": 0.92,
+     "recall": 0.8846153846153846,
+     "f1-score": 0.9019607843137255,
+     "support": 26.0
+    },
+    "infrastructure_and_utility_damage": {
+     "precision": 0.8784313725490196,
+     "recall": 0.7915194346289752,
+     "f1-score": 0.8327137546468402,
+     "support": 283.0
+    },
+    "injured_or_dead_people": {
+     "precision": 0.8833333333333333,
+     "recall": 0.8833333333333333,
+     "f1-score": 0.8833333333333333,
+     "support": 60.0
+    },
+    "not_humanitarian": {
+     "precision": 0.13138686131386862,
+     "recall": 0.6792452830188679,
+     "f1-score": 0.22018348623853212,
+     "support": 53.0
+    },
+    "other_relevant_information": {
+     "precision": 0.5769230769230769,
+     "recall": 0.33762057877813506,
+     "f1-score": 0.4259634888438134,
+     "support": 311.0
+    },
+    "requests_or_urgent_needs": {
+     "precision": 0.6573426573426573,
+     "recall": 0.6666666666666666,
+     "f1-score": 0.6619718309859155,
+     "support": 141.0
+    },
+    "rescue_volunteering_or_donation_effort": {
+     "precision": 0.7955182072829131,
+     "recall": 0.7263427109974424,
+     "f1-score": 0.7593582887700535,
+     "support": 391.0
+    },
+    "sympathy_and_support": {
+     "precision": 0.8,
+     "recall": 0.5714285714285714,
+     "f1-score": 0.6666666666666666,
+     "support": 133.0
+    },
+    "accuracy": 0.6407766990291263,
+    "macro avg": {
+     "precision": 0.6901736621916956,
+     "recall": 0.688873652506476,
+     "f1-score": 0.6625197721764837,
+     "support": 1442.0
+    },
+    "weighted avg": {
+     "precision": 0.7261131765465711,
+     "recall": 0.6407766990291263,
+     "f1-score": 0.6671499905671215,
+     "support": 1442.0
+    }
+   },
+   "loho_mask": 0.6928637886093528,
+   "loho_mask_C": 1,
+   "majority": 0.04740255804085591
+  },
+  "hurricane_florence_2018": {
+   "in_event": 0.7029971883040829,
+   "in_event_C": 0.5,
+   "in_event_report": {
+    "caution_and_advice": {
+     "precision": 0.6605504587155964,
+     "recall": 0.833976833976834,
+     "f1-score": 0.7372013651877133,
+     "support": 259.0
+    },
+    "displaced_people_and_evacuations": {
+     "precision": 0.8013698630136986,
+     "recall": 0.9285714285714286,
+     "f1-score": 0.8602941176470589,
+     "support": 126.0
+    },
+    "infrastructure_and_utility_damage": {
+     "precision": 0.6724137931034483,
+     "recall": 0.6190476190476191,
+     "f1-score": 0.6446280991735537,
+     "support": 63.0
+    },
+    "injured_or_dead_people": {
+     "precision": 0.8983050847457628,
+     "recall": 0.8983050847457628,
+     "f1-score": 0.8983050847457628,
+     "support": 59.0
+    },
+    "not_humanitarian": {
+     "precision": 0.8148148148148148,
+     "recall": 0.8380952380952381,
+     "f1-score": 0.8262910798122066,
+     "support": 210.0
+    },
+    "other_relevant_information": {
+     "precision": 0.41818181818181815,
+     "recall": 0.18253968253968253,
+     "f1-score": 0.2541436464088398,
+     "support": 126.0
+    },
+    "requests_or_urgent_needs": {
+     "precision": 0.3333333333333333,
+     "recall": 0.6363636363636364,
+     "f1-score": 0.4375,
+     "support": 11.0
+    },
+    "rescue_volunteering_or_donation_effort": {
+     "precision": 0.8943396226415095,
+     "recall": 0.8088737201365188,
+     "f1-score": 0.8494623655913979,
+     "support": 293.0
+    },
+    "sympathy_and_support": {
+     "precision": 0.8191489361702128,
+     "recall": 0.8191489361702128,
+     "f1-score": 0.8191489361702128,
+     "support": 94.0
+    },
+    "accuracy": 0.7614826752618856,
+    "macro avg": {
+     "precision": 0.7013841916355772,
+     "recall": 0.7294357977385482,
+     "f1-score": 0.7029971883040829,
+     "support": 1241.0
+    },
+    "weighted avg": {
+     "precision": 0.7525603842185591,
+     "recall": 0.7614826752618856,
+     "f1-score": 0.7487445463186445,
+     "support": 1241.0
+    }
+   },
+   "in_event_mask": 0.7165604268810519,
+   "in_event_mask_C": 1,
+   "loho": 0.6324760532559703,
+   "loho_C": 4,
+   "loho_report": {
+    "caution_and_advice": {
+     "precision": 0.7704081632653061,
+     "recall": 0.583011583011583,
+     "f1-score": 0.6637362637362637,
+     "support": 259.0
+    },
+    "displaced_people_and_evacuations": {
+     "precision": 0.8085106382978723,
+     "recall": 0.9047619047619048,
+     "f1-score": 0.8539325842696629,
+     "support": 126.0
+    },
+    "infrastructure_and_utility_damage": {
+     "precision": 0.5432098765432098,
+     "recall": 0.6984126984126984,
+     "f1-score": 0.6111111111111112,
+     "support": 63.0
+    },
+    "injured_or_dead_people": {
+     "precision": 0.8088235294117647,
+     "recall": 0.9322033898305084,
+     "f1-score": 0.8661417322834646,
+     "support": 59.0
+    },
+    "not_humanitarian": {
+     "precision": 0.7349397590361446,
+     "recall": 0.2904761904761905,
+     "f1-score": 0.41638225255972694,
+     "support": 210.0
+    },
+    "other_relevant_information": {
+     "precision": 0.2527075812274368,
+     "recall": 0.5555555555555556,
+     "f1-score": 0.34739454094292804,
+     "support": 126.0
+    },
+    "requests_or_urgent_needs": {
+     "precision": 0.23076923076923078,
+     "recall": 0.5454545454545454,
+     "f1-score": 0.32432432432432434,
+     "support": 11.0
+    },
+    "rescue_volunteering_or_donation_effort": {
+     "precision": 0.8498168498168498,
+     "recall": 0.7918088737201365,
+     "f1-score": 0.8197879858657244,
+     "support": 293.0
+    },
+    "sympathy_and_support": {
+     "precision": 0.78125,
+     "recall": 0.7978723404255319,
+     "f1-score": 0.7894736842105263,
+     "support": 94.0
+    },
+    "accuracy": 0.6510878323932313,
+    "macro avg": {
+     "precision": 0.6422706253742017,
+     "recall": 0.6777285646276283,
+     "f1-score": 0.6324760532559703,
+     "support": 1241.0
+    },
+    "weighted avg": {
+     "precision": 0.7207910300852607,
+     "recall": 0.6510878323932313,
+     "f1-score": 0.6593823683068172,
+     "support": 1241.0
+    }
+   },
+   "loho_mask": 0.6858011041376132,
+   "loho_mask_C": 0.5,
+   "majority": 0.042445313631754314
+  },
+  "hurricane_dorian_2019": {
+   "in_event": 0.6480966810967412,
+   "in_event_C": 0.5,
+   "in_event_report": {
+    "caution_and_advice": {
+     "precision": 0.6,
+     "recall": 0.7195571955719557,
+     "f1-score": 0.6543624161073825,
+     "support": 271.0
+    },
+    "displaced_people_and_evacuations": {
+     "precision": 0.867816091954023,
+     "recall": 0.949685534591195,
+     "f1-score": 0.9069069069069069,
+     "support": 159.0
+    },
+    "infrastructure_and_utility_damage": {
+     "precision": 0.6932515337423313,
+     "recall": 0.7018633540372671,
+     "f1-score": 0.6975308641975309,
+     "support": 161.0
+    },
+    "injured_or_dead_people": {
+     "precision": 0.5,
+     "recall": 0.5833333333333334,
+     "f1-score": 0.5384615384615384,
+     "support": 12.0
+    },
+    "not_humanitarian": {
+     "precision": 0.5099601593625498,
+     "recall": 0.7398843930635838,
+     "f1-score": 0.6037735849056604,
+     "support": 173.0
+    },
+    "other_relevant_information": {
+     "precision": 0.6242424242424243,
+     "recall": 0.36013986013986016,
+     "f1-score": 0.4567627494456763,
+     "support": 286.0
+    },
+    "requests_or_urgent_needs": {
+     "precision": 0.35,
+     "recall": 0.3888888888888889,
+     "f1-score": 0.3684210526315789,
+     "support": 36.0
+    },
+    "rescue_volunteering_or_donation_effort": {
+     "precision": 0.8666666666666667,
+     "recall": 0.7333333333333333,
+     "f1-score": 0.7944444444444444,
+     "support": 195.0
+    },
+    "sympathy_and_support": {
+     "precision": 0.8199052132701422,
+     "recall": 0.8046511627906977,
+     "f1-score": 0.812206572769953,
+     "support": 215.0
+    },
+    "accuracy": 0.6810344827586207,
+    "macro avg": {
+     "precision": 0.6479824543597931,
+     "recall": 0.6645930061944573,
+     "f1-score": 0.6480966810967412,
+     "support": 1508.0
+    },
+    "weighted avg": {
+     "precision": 0.691533366916008,
+     "recall": 0.6810344827586207,
+     "f1-score": 0.6751894129958395,
+     "support": 1508.0
+    }
+   },
+   "in_event_mask": 0.6441828795367296,
+   "in_event_mask_C": 1,
+   "loho": 0.6289668389500026,
+   "loho_C": 4,
+   "loho_report": {
+    "caution_and_advice": {
+     "precision": 0.6333333333333333,
+     "recall": 0.7011070110701108,
+     "f1-score": 0.6654991243432574,
+     "support": 271.0
+    },
+    "displaced_people_and_evacuations": {
+     "precision": 0.8771929824561403,
+     "recall": 0.9433962264150944,
+     "f1-score": 0.9090909090909091,
+     "support": 159.0
+    },
+    "infrastructure_and_utility_damage": {
+     "precision": 0.5920398009950248,
+     "recall": 0.7391304347826086,
+     "f1-score": 0.6574585635359116,
+     "support": 161.0
+    },
+    "injured_or_dead_people": {
+     "precision": 0.5,
+     "recall": 0.75,
+     "f1-score": 0.6,
+     "support": 12.0
+    },
+    "not_humanitarian": {
+     "precision": 0.465,
+     "recall": 0.5375722543352601,
+     "f1-score": 0.49865951742627346,
+     "support": 173.0
+    },
+    "other_relevant_information": {
+     "precision": 0.5652173913043478,
+     "recall": 0.4090909090909091,
+     "f1-score": 0.4746450304259635,
+     "support": 286.0
+    },
+    "requests_or_urgent_needs": {
+     "precision": 0.4117647058823529,
+     "recall": 0.19444444444444445,
+     "f1-score": 0.2641509433962264,
+     "support": 36.0
+    },
+    "rescue_volunteering_or_donation_effort": {
+     "precision": 0.7875647668393783,
+     "recall": 0.7794871794871795,
+     "f1-score": 0.7835051546391752,
+     "support": 195.0
+    },
+    "sympathy_and_support": {
+     "precision": 0.835820895522388,
+     "recall": 0.7813953488372093,
+     "f1-score": 0.8076923076923077,
+     "support": 215.0
+    },
+    "accuracy": 0.666445623342175,
+    "macro avg": {
+     "precision": 0.6297704307036629,
+     "recall": 0.6484026453847574,
+     "f1-score": 0.6289668389500026,
+     "support": 1508.0
+    },
+    "weighted avg": {
+     "precision": 0.6648691982094556,
+     "recall": 0.666445623342175,
+     "f1-score": 0.660417709853501,
+     "support": 1508.0
+    }
+   },
+   "loho_mask": 0.626482979696958,
+   "loho_mask_C": 2,
+   "majority": 0.02544529262086514
+  }
+ },
+ "pooled_majority_macro_f1": 0.04037981009495253,
+ "learning_curve": [
+  {
+   "n": 100,
+   "mean": 0.37295049649353434,
+   "std": 0.02711297726181336
+  },
+  {
+   "n": 250,
+   "mean": 0.5380380620559818,
+   "std": 0.0029547290036610473
+  },
+  {
+   "n": 500,
+   "mean": 0.6148544448997644,
+   "std": 0.005258277510748206
+  },
+  {
+   "n": 1000,
+   "mean": 0.6579639438365317,
+   "std": 0.0041827017270167684
+  },
+  {
+   "n": 2500,
+   "mean": 0.6903385698491854,
+   "std": 0.001536306307001994
+  },
+  {
+   "n": 5000,
+   "mean": 0.7078828700929704,
+   "std": 0.001051090012530295
+  },
+  {
+   "n": 10000,
+   "mean": 0.7184824756996889,
+   "std": 0.0034546987111836623
+  },
+  {
+   "n": 28921,
+   "mean": 0.7297818923871742,
+   "std": 0.0
+  }
+ ]
+}

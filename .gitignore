@@ -1,0 +1,17 @@
+# downloaded data (fetch with: python src/download_data.py)
+data/
+
+# Python
+__pycache__/
+*.pyc
+
+# LaTeX build files
+report/*.aux
+report/*.bbl
+report/*.blg
+report/*.log
+report/*.out
+report/missfont.log
+
+# run logs
+results/run.log
