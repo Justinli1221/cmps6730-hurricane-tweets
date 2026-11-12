@@ -1,0 +1,14 @@
+[Parallel(n_jobs=3)]: Using backend LokyBackend with 3 concurrent workers.
+[Parallel(n_jobs=3)]: Done  12 out of 100 | elapsed:  4.9min
+[Parallel(n_jobs=3)]: Done  66 out of 100 | elapsed: 20.7min
+[Parallel(n_jobs=3)]: Done 100 out of 100 | elapsed: 30.7min finished
+[Parallel(n_jobs=3)]: Using backend LokyBackend with 3 concurrent workers.
+[Parallel(n_jobs=3)]: Done 12 out of 22 | elapsed:    9.4s
+[Parallel(n_jobs=3)]: Done 22 out of 22 | elapsed:  1.3min finished
+Matthew {'in_event': 0.761, 'in_event_C': 2, 'in_event_mask': 0.754, 'in_event_mask_C': 2, 'loho': 0.754, 'loho_C': 1, 'loho_mask': 0.752, 'loho_mask_C': 2, 'majority': 0.037}
+Harvey {'in_event': 0.703, 'in_event_C': 1, 'in_event_mask': 0.69, 'in_event_mask_C': 1, 'loho': 0.676, 'loho_C': 1, 'loho_mask': 0.678, 'loho_mask_C': 2, 'majority': 0.053}
+Irma {'in_event': 0.686, 'in_event_C': 1, 'in_event_mask': 0.677, 'in_event_mask_C': 2, 'loho': 0.669, 'loho_C': 2, 'loho_mask': 0.673, 'loho_mask_C': 4, 'majority': 0.032}
+Maria {'in_event': 0.693, 'in_event_C': 1, 'in_event_mask': 0.701, 'in_event_mask_C': 2, 'loho': 0.663, 'loho_C': 1, 'loho_mask': 0.693, 'loho_mask_C': 1, 'majority': 0.047}
+Florence {'in_event': 0.703, 'in_event_C': 0.5, 'in_event_mask': 0.717, 'in_event_mask_C': 1, 'loho': 0.632, 'loho_C': 4, 'loho_mask': 0.686, 'loho_mask_C': 0.5, 'majority': 0.042}
+Dorian {'in_event': 0.648, 'in_event_C': 0.5, 'in_event_mask': 0.644, 'in_event_mask_C': 1, 'loho': 0.629, 'loho_C': 4, 'loho_mask': 0.626, 'loho_mask_C': 2, 'majority': 0.025}
+pooled 0.7297818923871742 curve [{'n': 100, 'mean': 0.37295049649353434, 'std': 0.02711297726181336}, {'n': 250, 'mean': 0.5380380620559818, 'std': 0.0029547290036610473}, {'n': 500, 'mean': 0.6148544448997644, 'std': 0.005258277510748206}, {'n': 1000, 'mean': 0.6579639438365317, 'std': 0.0041827017270167684}, {'n': 2500, 'mean': 0.6903385698491854, 'std': 0.001536306307001994}, {'n': 5000, 'mean': 0.7078828700929704, 'std': 0.001051090012530295}, {'n': 10000, 'mean': 0.7184824756996889, 'std': 0.0034546987111836623}, {'n': 28921, 'mean': 0.7297818923871742, 'std': 0.0}]

@@ -23,7 +23,7 @@ The milestone report is in [report/report.pdf](report/report.pdf).
 
 ```bash
 pip install scikit-learn pandas numpy scipy matplotlib joblib
-python src/download_data.py   # about 11 MB from Hugging Face
+python src/download_data.py   # only needed if data/ is missing (about 11 MB)
 python src/experiments.py     # writes results/ (about 45 minutes on a laptop)
 cd report && bash build.sh    # compiles report/report.pdf
 ```
@@ -32,7 +32,7 @@ cd report && bash build.sh    # compiles report/report.pdf
 
 ## Data license
 
-HumAID is released by Alam et al. (2021) under CC BY-NC-SA 4.0. The data is not included in this repository; `src/download_data.py` fetches it from the [official release](https://huggingface.co/datasets/QCRI/HumAID-events).
+`data/humaid/` contains the six hurricane events from HumAID, copied unchanged from the authors' [official release](https://huggingface.co/datasets/QCRI/HumAID-events). HumAID is created by Alam, Qazi, Imran and Ofli (ICWSM 2021) and licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); that license applies to the files in `data/`. `src/download_data.py` re-downloads them if needed.
 
 ## AI Usage Log
 
