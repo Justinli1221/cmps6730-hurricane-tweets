@@ -33,9 +33,3 @@ cd report && bash build.sh    # compiles report/report.pdf
 ## Data license
 
 `data/humaid/` contains the six hurricane events from HumAID, copied unchanged from the authors' [official release](https://huggingface.co/datasets/QCRI/HumAID-events). HumAID is created by Alam, Qazi, Imran and Ofli (ICWSM 2021) and licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); that license applies to the files in `data/`. `src/download_data.py` re-downloads them if needed.
-
-## AI Usage Log
-
-- **Tool**: Claude.
-- **Purpose**: help structuring the report, finding related work, and writing the preliminary experiment code.
-- **Verification**: I checked each cited paper against its arXiv abstract, re-ran the experiment script, and edited the text.
